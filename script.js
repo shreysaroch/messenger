@@ -1,13 +1,11 @@
-// create the module and name it scotchApp
-// also include ngRoute for all our routing needs
-var scotchApp = angular.module('scotchApp', ['ngRoute']);
-scotchApp.run(function($rootScope) {
+var messengerApp = angular.module('messengerApp', ['ngRoute']);
+messengerApp.run(function($rootScope) {
     $rootScope.$on('scope.stored', function(event, data) {
         console.log("scope.stored", data); //for testing purposes
     });
 });
 // configure our routes
-scotchApp.config(function($routeProvider) {
+messengerApp.config(function($routeProvider) {
     $routeProvider
 
     // route for the home page  
@@ -28,7 +26,7 @@ scotchApp.config(function($routeProvider) {
 });
 
 // create the controller and inject Angular's $scope
-scotchApp.controller('mainController', function($scope, $http, Scopes) {
+messengerApp.controller('mainController', function($scope, $http, Scopes) {
     Scopes.store('mainController', $scope);
     $scope.getMemberId = function(memberId) {
         $scope.memberId = memberId;
@@ -44,7 +42,7 @@ scotchApp.controller('mainController', function($scope, $http, Scopes) {
 
 
 
-scotchApp.controller('contactController', function($scope, $http, Scopes) {
+messengerApp.controller('contactController', function($scope, $http, Scopes) {
     Scopes.store('contactController', $scope);
     $scope.getMemberId = function(nameId) {
         $scope.nameId = nameId;
@@ -62,11 +60,11 @@ scotchApp.controller('contactController', function($scope, $http, Scopes) {
 
 });
 
-scotchApp.controller('aboutController', function($scope) {
+messengerApp.controller('aboutController', function($scope) {
 
 });
 
-scotchApp.factory('Scopes', function($rootScope) {
+messengerApp.factory('Scopes', function($rootScope) {
     var mem = {};
 
     return {
