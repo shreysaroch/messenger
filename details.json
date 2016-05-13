@@ -1,0 +1,43 @@
+{
+    "records": [{
+        "title": "Stacy",
+        "mobile": 8765000000,
+        "location": "Gurgaon",
+        "manager": "Smith",
+        "role": "Administrator UK Group",
+        "email": "stacy@ukgrp.uk",
+        "extension": 14848,
+        "skill": "Expert User (50K+)",
+        "lastActive": "Online Now"
+    }, {
+        "title": "Joana",
+        "mobile": 8765005400,
+        "location": "Gurgaon",
+        "manager": "Smith",
+        "role": "Administrator US Group",
+        "email": "Joana@ukgrp.uk",
+        "extension": 14849,
+        "skill": "New User",
+        "lastActive": "Online Now"
+    }, {
+        "title": "Katie",
+        "mobile": 8765320000,
+        "location": "Gurgaon",
+        "manager": "Smith",
+        "role": "DBA UK Group",
+        "email": "Katie@ukgrp.uk",
+        "extension": 148483,
+        "skill": "Expert User (50K+)",
+        "lastActive": "Online 2 days ago"
+    }, {
+        "title": "Mindy",
+        "mobile": 8765320000,
+        "location": "Gurgaon",
+        "manager": "Smith",
+        "role": "UX IGI Group",
+        "email": "Mindy@ukgrp.uk",
+        "extension": 14828,
+        "skill": "Intermediate User",
+        "lastActive": "Online Yesterday"
+    }]
+}

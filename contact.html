@@ -1,0 +1,119 @@
+<!-- contact.html -->
+<a href="#home" class="sec-text"><i class="fa fa-backward"></i>Back</a>
+<div class="text-center bg-color">
+    <div class="calling" ng-show="myvalue"> Calling</div>
+    <div class="row">
+        <div class="col-md-8">
+            <div class="row" ng-show="listId || updatedList">
+                <span ng-hide="myvalue">
+                	<img src="message.png" alt="Call" style="width:70px;height:70px;">
+            	</span>
+                <span class="user-img">
+            		<img src="girl.png" alt="Call" style="width:70px;height:70px;">
+
+            	</span>
+                <span class="name-list" ng-hide="myvalue">
+                	<img  ng-click="myvalue = myvalue == true ? false : true;" src="call1.png" alt="Call" style="width:70px;height:70px;">
+            	</span>
+            </div>
+            <div class="row sec-text" ng-hide="updatedList" ng-show="listId" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].title}}</span>
+            </div>
+            <div class="row sec-text" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].title}}</span>
+            </div>
+            <div class="row sec-text" ng-hide="updatedList" ng-show="listId" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].role}}</span>
+            </div>
+            <div class="row sec-text" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].role}}</span>
+            </div>
+            <div class="row" ng-hide="updatedList" ng-show="listId" ng-hide="myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].email}}</span>
+            </div>
+            <div class="row" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].email}}</span>
+            </div>
+            <div class="row" ng-show="listId">
+                <span class="col-md-4 display-list-block"> 
+                	<div class = "row" ng-hide="updatedList || myvalue">Mobile</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].mobile}}</div>
+            		 <div class = "row" ng-hide="updatedList || myvalue">Manager</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue"  ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].manager}}</div>
+            		<div class = "row" ng-hide="updatedList || myvalue">Skill</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].skill}}</div>
+            	</span>
+                <span class="col-md-4">
+                	<div class = "row" ng-hide="updatedList || myvalue">Location</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].location}}</div>
+            		<div class = "row" ng-hide="updatedList || myvalue">Extension</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].extension}}</div>
+            		<div class = "row" ng-hide="updatedList || myvalue">Last Active</div>
+            		<div class = "row sec-text" ng-hide="updatedList || myvalue" ng-selected="selectedIndex=listId" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].lastActive}}</div>
+            	</span>
+            </div>
+            <div class="row" ng-show="updatedList">
+                <span class="col-md-4 display-list-block"> 
+                	<div class = "row " ng-hide="myvalue" >Mobile</div>
+            		<div class = "row sec-text" ng-hide="myvalue" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].mobile}}</div>
+            		 <div class = "row " ng-hide="myvalue">Manager</div>
+            		<div class = "row sec-text" ng-hide="myvalue"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].manager}}</div>
+            		<div class = "row" ng-hide="myvalue" >Skill</div>
+            		<div class = "row sec-text" ng-hide="myvalue" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].skill}}</div>
+            	</span>
+                <span class="col-md-4">
+                	<div class = "row" ng-hide="myvalue">Location</div>
+            		<div class = "row sec-text" ng-hide="myvalue" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].location}}</div>
+            		<div class = "row" ng-hide="myvalue">Extension</div>
+            		<div class = "row sec-text" ng-hide="myvalue" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].extension}}</div>
+            		<div class = "row" ng-hide="myvalue">Last Active</div>
+            		<div class = "row sec-text"ng-hide="myvalue"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].lastActive}}</div>
+            	</span>
+            </div>
+            <div class="row call-buttons" ng-show="myvalue">
+                <span>
+                	<img src="mute.png" alt="Call" style="width:50px;height:50px;">
+            	</span>
+                <span class="name-list end-button">
+                	<img src="hang.png" ng-click="myvalue = myvalue == true ? false : true;" alt="Call" style="width:50px;height:50px;">
+            	</span>
+            </div>
+            <!-- <div class="row sec-text" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].title}}</span>
+            </div>
+            <div class="row sec-text" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].role}}</span>
+            </div>
+            <div class="row" ng-show="updatedList" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">
+                <span>{{records[selectedIndex].email}}</span>
+            </div>
+            <div class="row" ng-show="updatedList">
+                <span class="col-md-4 display-list-block"> 
+                	<div class = "row sec-text" >Mobile</div>
+            		<div class = "row" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].mobile}}</div>
+            		 <div class = "row sec-text" >Manager</div>
+            		<div class = "row"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].manager}}</div>
+            		<div class = "row sec-text" >Skill</div>
+            		<div class = "row" ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].skill}}</div>
+            	</span>
+                <span class="col-md-4">
+                	<div class = "row sec-text" >Location</div>
+            		<div class = "row"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].location}}</div>
+            		<div class = "row sec-text" >Extension</div>
+            		<div class = "row"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].extension}}</div>
+            		<div class = "row sec-text" >Last Active</div>
+            		<div class = "row"  ng-selected="selectedIndex=updatedList" ng-repeat="title in records|limitTo:1">{{records[selectedIndex].lastActive}}</div>
+            	</span>
+            </div> -->
+        </div>
+        <div class="col-md-3 workspace">
+            <ul class="list-group display-list-block">
+                <li class="list-group-item " ng-repeat="title in records track by $index">
+                    <span><td><a ng-href=""><i class="fa fa-female" aria-hidden="true"></i>
+</a></td></span>
+                    <span class="name-list" ng-click="getMemberId($index)">{{title.title}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

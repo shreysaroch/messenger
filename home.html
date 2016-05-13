@@ -1,0 +1,16 @@
+<div>
+    <div class="row">
+        <div class="col-md-8 sec-text">
+            Aww...Snap, No recent chats found :(
+        </div>
+        <div class="col-md-3 workspace">
+            <ul class="list-group display-list-block">
+                <li class="list-group-item " ng-repeat="title in records track by $index">
+                    <span><td><a ng-href=""><i class="fa fa-female" aria-hidden="true"></i>
+</a></td></span>
+                    <span class="name-list" ng-click="getMemberId($index)">{{title.title}}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+$primary-text-color: #212121;
+.options {
+    padding-left: 36%;
+}
+
+.workspace {
+    margin-right: 5%;
+}
+
+.display-list-block {
+    margin-left: 18%;
+}
+
+.name-list {
+    cursor: pointer;
+}
+
+.user-img {
+    padding: 0 40px 0 40px;
+}
+
+.call-buttons {
+    padding-top: 20px;
+}
+
+.calling {
+    float: left;
+    margin-left: 32%;
+}
+
+.bg-color {
+    background: #6495ED;
+}
+
+.sec-text {
+    color: #FAFAFA;
+}
+
+.end-button {
+    padding-left: 20px;
+}
+
+.appl {
+    padding: 10px;
+}
